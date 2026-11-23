@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ThermoSense – AI Smart Energy Saver</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<h1>🌡️ ThermoSense – AI Smart Energy Saver</h1>
+<p class="sub">Drag to rotate the classroom. Add or remove students and watch the system react.</p>
+<canvas id="cv"></canvas>
+<div class="card">
+<div class="row">
+<div class="chip" id="cOcc">Presence<b id="vOcc">–</b></div>
+<div class="chip" id="cLt">Lights<b id="vLt">–</b></div>
+<div class="chip" id="cFan">Fans<b id="vFan">–</b></div>
+<div class="chip">Students<b id="vN">0</b></div>
+</div>
+<div class="row" style="margin-top:8px">
+<button class="p" id="add">+ Student enters</button><button id="rem">− Student leaves</button>
+<button id="clr">Room empty</button><button id="th">Thermal view</button><button id="demo">Auto demo</button>
+</div>
+<label>Daylight: <span id="dl">60</span>%</label><input type="range" id="day" min="0" max="100" value="60">
+</div>
+<div class="card">
+<div class="row">
+<div class="chip">Without system<b id="eB">0 Wh</b></div>
+<div class="chip">With ThermoSense<b id="eO">0 Wh</b></div>
+<div class="chip">Saved<b class="big" id="sv">0%</b></div>
+</div>
+<p class="sm">Load: 4 lights × 18 W + 2 fans × 60 W = 192 W. 1 s here = 1 simulated minute. Lights/fans switch OFF 5 min after the room is empty; lights dim or stay off when daylight is enough.</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script></body></html>
